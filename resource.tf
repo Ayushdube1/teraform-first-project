@@ -11,7 +11,7 @@ resource "azurerm_resource_group" "storeterra" {
 }
  
 resource "azurerm_storage_account" "ayushsaterra" {
-    name                     = "terrastorage123"
+    name                     = "ayushdube448833"
     resource_group_name      = azurerm_resource_group.storeterra.name
     location                 = azurerm_resource_group.storeterra.location
     account_tier             = "Standard"
