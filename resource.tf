@@ -4,14 +4,13 @@
 }
 
 
-
 resource "azurerm_resource_group" "storeterra" {
-    name     = "storeterra"
+    name     = "example-resources"
     location = "East US"
 }
  
 resource "azurerm_storage_account" "saterra" {
-    name                     = "ayushdube448833333"
+    name                     = "ayushdube3344726372376237"
     resource_group_name      = azurerm_resource_group.storeterra.name
     location                 = azurerm_resource_group.storeterra.location
     account_tier             = "Standard"
@@ -19,7 +18,7 @@ resource "azurerm_storage_account" "saterra" {
 }
  
 resource "azurerm_storage_container" "sacontainer" {
-    name                  = "sacontainer"
+    name                  = "terra-container"
     storage_account_name  = azurerm_storage_account.saterra.name
     container_access_type = "private"
 }
@@ -44,3 +43,4 @@ resource "azurerm_subnet" "subnet2" {
     virtual_network_name = azurerm_virtual_network.terra_vnet.name
     address_prefixes     = ["10.0.2.0/24"]
 }
+
